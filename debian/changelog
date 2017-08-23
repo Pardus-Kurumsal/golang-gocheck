@@ -1,0 +1,49 @@
+golang-gocheck (0.0~bzr20131118+85-6pardus1) onyedi; urgency=medium
+
+  * Update control file
+  * Update rules
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Wed, 23 Aug 2017 11:07:45 +0300
+
+golang-gocheck (0.0~bzr20131118+85-6) trusty; urgency=low
+
+  * build with go 1.3.1 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Wed, 20 Aug 2014 16:47:18 +0800
+
+golang-gocheck (0.0~bzr20131118+85-5) trusty; urgency=low
+
+  * build with go 1.3. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 23 Jun 2014 17:18:10 +0800
+
+golang-gocheck (0.0~bzr20131118+85-4) trusty; urgency=low
+
+  * build with go 1.3~rc1. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Tue, 10 Jun 2014 09:12:31 +0800
+
+golang-gocheck (0.0~bzr20131118+85-3) trusty; urgency=low
+
+  * build with go 1.2.1. 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Tue, 11 Mar 2014 08:46:49 +0800
+
+golang-gocheck (0.0~bzr20131118+85-2) saucy; urgency=low
+
+  * port to saucy 
+
+ -- Deepin Packages Builder <packages@linuxdeepin.com>  Mon, 06 Jan 2014 17:27:53 +0800
+
+golang-gocheck (0.0~bzr20131118+85-2) unstable; urgency=medium
+
+  * Patching fixture_test.go with expected panic msg for Go 1.2
+    (Closes: #733440)
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Mon, 30 Dec 2013 14:02:10 -0300
+
+golang-gocheck (0.0~bzr20131118+85-1) unstable; urgency=low
+
+  * Initial release (Closes: #729984)
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Mon, 18 Nov 2013 15:53:14 -0300

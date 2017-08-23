@@ -1,0 +1,57 @@
+Subject: Fixing expected panic regex in tests for go 1.2
+Author: Sergio Schvezov <sergio.schvezov@canonical.com>
+Forwarded: https://code.launchpad.net/~sergiusens/gocheck/expected_panic_regex_in_tests/+merge/199661
+
+--- a/fixture_test.go
++++ b/fixture_test.go
+@@ -59,7 +59,9 @@
+ 		".*gocheck_test.go:[0-9]+\n" +
+ 		"  in FixtureHelper.trace\n" +
+ 		".*gocheck_test.go:[0-9]+\n" +
+-		"  in FixtureHelper.Test1\n$"
++		"  in FixtureHelper.Test1\n" +
++		".+:[0-9]+\n" +
++		"  in call[0-9]+\n$"
+ 
+ 	c.Check(output.value, Matches, expected)
+ }
+@@ -84,6 +86,8 @@
+ 		"  in FixtureHelper.trace\n" +
+ 		".*gocheck_test.go:[0-9]+\n" +
+ 		"  in FixtureHelper.SetUpTest\n" +
++		".+:[0-9]+\n" +
++		"  in call[0-9]+\n" +
+ 		"\n-+\n" +
+ 		"PANIC: gocheck_test\\.go:[0-9]+: " +
+ 		"FixtureHelper\\.Test1\n\n" +
+@@ -114,6 +118,8 @@
+ 		"  in FixtureHelper.trace\n" +
+ 		".*gocheck_test.go:[0-9]+\n" +
+ 		"  in FixtureHelper.TearDownTest\n" +
++		".+:[0-9]+\n" +
++		"  in call[0-9]+\n" +
+ 		"\n-+\n" +
+ 		"PANIC: gocheck_test\\.go:[0-9]+: " +
+ 		"FixtureHelper\\.Test1\n\n" +
+@@ -140,7 +146,9 @@
+ 		".*gocheck_test.go:[0-9]+\n" +
+ 		"  in FixtureHelper.trace\n" +
+ 		".*gocheck_test.go:[0-9]+\n" +
+-		"  in FixtureHelper.SetUpSuite\n$"
++		"  in FixtureHelper.SetUpSuite\n" +
++		".+:[0-9]+\n" +
++		"  in call[0-9]+\n$"
+ 
+ 	c.Check(output.value, Matches, expected)
+ }
+@@ -168,7 +176,9 @@
+ 		".*gocheck_test.go:[0-9]+\n" +
+ 		"  in FixtureHelper.trace\n" +
+ 		".*gocheck_test.go:[0-9]+\n" +
+-		"  in FixtureHelper.TearDownSuite\n$"
++		"  in FixtureHelper.TearDownSuite\n" +
++		".+:[0-9]+\n" +
++		"  in call[0-9]+\n$"
+ 
+ 	c.Check(output.value, Matches, expected)
+ }
